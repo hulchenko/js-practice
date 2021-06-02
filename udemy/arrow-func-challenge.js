@@ -21,7 +21,15 @@ const tasks = {
     },
   ],
   getTasksToDo: function () {
-    console.log(this.tasks);
+    // let arr = [];
+    // for (let i = 0; i < this.tasks.length; i++) {
+    //   if (!this.tasks[i].completed) {
+    //     arr.push(this.tasks[i].text);
+    //   }
+    // }
+    // return arr;
+    const toDoTasks = this.tasks.filter((task) => task.completed === false);
+    return toDoTasks;
   },
 };
 
